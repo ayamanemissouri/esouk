@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>E-Souk</title>
+
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>E-souk</title>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="../css/mdb.min.css" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/home.css'>
+	<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://wagtrung.github.io/store/themify-icons/themify-icons.css">
+	<link href="css/addons-pro/steppers.css" rel="stylesheet">
+	<!-- Stepper CSS - minified-->
+	<link href="css/addons-pro/steppers.min.css" rel="stylesheet">
+
+	<!-- Stepper JavaScript -->
+	<script type="text/javascript" src="js/addons-pro/steppers.js"></script>
+	<!-- Stepper JavaScript - minified -->
+	<script type="text/javascript" src="js/addons-pro/steppers.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+<div class="container">
+	<nav class="navbar fixed-top navbar-expand-lg  navbar-light scrolling-navbar white">
+		<div class="container">
+			<!-- SideNav slide-out button -->
+			<div class="float-left mr-2">
+				<a href="#" data-activates="slide-out" class="button-collapse">
+					<i class="fas fa-bars green-text"></i>
+				</a>
+			</div>
+			<a class="navbar-brand font-weight-bold" href="#">
+				<strong>E-Souk</strong>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+					aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
+							<i class="fas fa-home green-text"></i>Acceuil
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item ml-3">
+						<a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
+							<i class="fas fa-cog green-text"></i>Information</a>
+					</li>
+					<li class="nav-item dropdown ml-3">
+						<a class="nav-link dropdown-toggle waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+						   aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-user green-text"></i> Profile </a>
+						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+							<a class="dropdown-item waves-effect waves-light" href="#">Mon compte</a>
+							<a class="dropdown-item waves-effect waves-light" href="#">s'inscrire</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a href="#!" class="nav-link waves-effect" data-toggle="modal" data-target="#modalCart">
+							<span class="badge red z-depth-1 mr-1"> 0 </span>
+							<i id="navbar-static-cart" alt="Cart" class="fas fa-shopping-cart"></i>
+							<span class="sr-only"> Cart </span></a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="row" id="row">
+		<h1 class="col-lg-3 col-md-3 col-s-6" style="font-size:73px;"><strong class="text-success">E</strong>-souk</h1>
+	 	<div class="col-lg-9 col-md-9 col-s-12 form">
+		 	<form class="row">
+				<div class="col-lg-9 col-md-9">
+					<div class="md-form">
+					<input type="text" id="form1" class="form-control " placeholder="chercher...">
+
+					</div>
+				</div>
+		 		<input type="submit" value="CHERCHER" class="btn btn-success col-lg-2 col-md-2 col-s-12" id="search">
+		 	</form>
+
+	 </div>
+
+
+		
+	</div>
+	<hr>
+
+</div>
+<div class="container">
+	<!-- Horizontal Steppers -->
+	<div class="row">
+		<div class="col-md-12">
+
+			<!-- Stepers Wrapper -->
+			<ul class="stepper stepper-horizontal">
+
+				<!-- First Step -->
+				<li class="step active">
+					<a href="#!">
+						<span class="circle">1</span>
+						<span class="label">Remplir Panier</span>
+					</a>
+				</li>
+
+				<!-- Second Step -->
+				<li class="step">
+					<a href="#!">
+						<span class="circle">2</span>
+						<span class="label">Payer</span>
+					</a>
+				</li>
+
+				<!-- Third Step -->
+				<li class="step">
+					<a href="#!">
+						<span class="circle"><i class="fas fa-exclamation"></i></span>
+						<span class="label">Commander</span>
+					</a>
+				</li>
+
+			</ul>
+			<!-- /.Stepers Wrapper -->
+
+		</div>
+	</div>
+	<!--<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item">User</li>
+			<li class="breadcrumb-item active">user001</li>
+		</ol>
+	</nav>
+	/.Horizontal Steppers -->
+	<hr>
+
+
+	</div>
+<div class="container-fluid">
+	<div class="row">
+		<nav class="category col-lg-2 col-md-2 col-s-12" >
+
+			<div class="ctghead">
+
+				<h3><i class="ti-list"></i>Category</h3>
+			</div>
+
+
+
+
+
+			<div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true" >
+
+				<!-- Accordion card -->
+				<div class="card" id="cardCategory">
+
+					<!-- Card header -->
+					<div class="card-header" role="tab" id="headingTwo1" style="background-color:white;">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
+						   aria-expanded="false" aria-controls="collapseTwo1">
+							<h3 class="mb-0 text-success">
+								<i class="fas fa-apple-alt green-text"></i> Fruit  <i class="fas fa-angle-down rotate-icon green-text"></i>
+							</h3>
+						</a>
+					</div>
+
+					<!-- Card body -->
+					<div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+						 data-parent="#accordionEx1" style="background-color:white;">
+						<div class="card-body">
+							<ul class="list-group" th:each="fruit:${fruits}">
+								<li class="list-group-item row">
+									<div class="md-v-line"></div>  <img th:src="@{'../img/'+ ${fruit.photo} +'.jpg'}"   class="img-fluid col-lg-4"   alt="Responsive image" id="imageProduct">
+									<a th:text="${fruit.designation}" class="text-dark text-decoration-none " style="font-size:15px;" th:href="@{./{category}(category=${fruit.designation})}"></a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<!-- Accordion card -->
+
+				<!-- Accordion card -->
+				<div class="card" >
+
+					<!-- Card header -->
+					<div class="card-header" role="tab" id="headingTwo2" style="background-color:white;">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21"
+						   aria-expanded="false" aria-controls="collapseTwo21">
+							<h3 class="mb-0 text-success"> <i class="fas fa-carrot green-text"></i>
+								Legume <i class="fas fa-angle-down rotate-icon"></i>
+							</h3>
+						</a>
+					</div>
+
+					<!-- Card body -->
+					<div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
+						 data-parent="#accordionEx1" style="background-color:white;">
+						<div class="card-body">
+							<ul class="list-group" th:each="legume:${legumes}">
+								<li class="list-group-item row">
+									<div class="md-v-line"></div>  <img th:src="@{'../img/'+ ${legume.photo} +'.jpg'}"   class="img-fluid col-lg-4"   alt="Responsive image" id="imageProduct">
+									<a th:text="${legume.designation}" class="text-dark text-decoration-none " style="font-size:15px;" th:href="@{./{category}(category=${legume.designation})}"></a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<!-- Accordion card -->
+
+				<!-- Accordion card -->
+				<div class="card">
+
+					<!-- Card header -->
+					<div class="card-header" role="tab" id="headingThree31" style="background-color:white;">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseThree31"
+						   aria-expanded="false" aria-controls="collapseThree31">
+							<h3 class="mb-0 text-success"> <i class="fas fa-heartbeat green-text"></i>
+								Bio <i class="fas fa-angle-down rotate-icon"></i>
+							</h3>
+						</a>
+					</div>
+
+					<!-- Card body -->
+					<div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
+						 data-parent="#accordionEx1" style="background-color:white;">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+							wolf
+							moon
+							officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+							Brunch
+							3
+							wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+							shoreditch
+							et.
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+							Ad
+							vegan
+							excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+							nesciunt
+							you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					</div>
+
+				</div>
+				<!-- Accordion card -->
+
+			</div>
+			<!-- Accordion wrapper -->
+
+
+
+
+		</nav>
+		<!--
+     <div id="carouselExampleControls" class="carousel slide col-lg-6 col-md-6 col-s-12" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/img/carousel.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/img/carousel2.jpg" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+</div>
+    <div class="col-lg-3 col-md-3 col-s-12">
+        <img src="/img/image1.jpg" class="image1">
+        <img src="/img/image2.jpg" class="image1">
+        <img src="/img/image3.jpg" class="image1">
+
+    </div>-->
+		<div class="container col-lg-10 col-md-10 col-s-12" >
+			<div class="row" id="rowProduct">
+
+				<div class="cardProduit" th:each="produit:${produitMettre}" id="cardProduit">
+
+					<div class="card-wrapper"  id="card">
+						<div  id="card-1" class="card card-rotating text-center">
+							<div class="face front">
+								<div class="card-up">
+									<img class="card-img-top" th:src="@{'/img/'+ ${produit.produit.photo} +'.jpg'}"  alt="produit">
+								</div>
+								<hr>
+								<div class="avatar mx-auto white">
+									<img th:src="@{'/img/'+ ${produit.boutique.agr.photo} +'.jpg'}" id="imageAgr"  alt="agriculteur" style="margin-top:-70px;">
+								</div>
+							</div>
+
+							<div class="card-body card-body-cascade" style="height:50%;">
+								<span th:text="${produit.boutique.agr.nom}" class="col-lg-3 text-primary"></span><span th:text="${produit.boutique.agr.prenom}" class="text-primary"></span>
+								<h4 class="card-title" th:text="${produit.produit.designation}" style="font-family:'Covered By Your Grace'" id="textProduits"></h4>
+
+
+								<p class="card-text"  style="font-size:10px;">Nos légumes sont 100% et proviennent des meilleurs agriculteurs de tout le royaume!</p>
+
+								<div class="card-footer px-1" id="card-footer">
+									<span class="float-left text-success" th:text="${produit.prix}+' DH'" style="font-size:18px;"></span>
+									<span class="float-right">
+											<a class="material-tooltip-main text-success" data-toggle="tooltip" data-placement="top" title="" data-original-title="Voir">
+											  <i class="fas fa-eye ml-3 green-text"></i>
+											</a>
+											<a class="material-tooltip-main text-succes" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+											  <i class="fas fa-shopping-cart ml-3 green-text"></i>
+											</a>
+										  </span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	 aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!--Header-->
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">Your cart</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<!--Body-->
+			<div class="modal-body">
+
+				<table class="table table-hover">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th>Product name</th>
+						<th>Price</th>
+						<th>Remove</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Product 1</td>
+						<td>100$</td>
+						<td><a><i class="fas fa-times"></i></a></td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Product 2</td>
+						<td>100$</td>
+						<td><a><i class="fas fa-times"></i></a></td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Product 3</td>
+						<td>100$</td>
+						<td><a><i class="fas fa-times"></i></a></td>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<td>Product 4</td>
+						<td>100$</td>
+						<td><a><i class="fas fa-times"></i></a></td>
+					</tr>
+					<tr class="total">
+						<th scope="row">5</th>
+						<td>Total</td>
+						<td>400$</td>
+						<td></td>
+					</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<!--Footer-->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+				<button class="btn btn-primary">Checkout</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="application/javascript" src="../js/jquery-3.4.1.min.js" ></script>
+<script type="application/javascript" src="../js/home.js" ></script>
+</body>
+</html>
