@@ -88,7 +88,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form th:action="@{../saveProduct}" th:object="${produitmettre1}" method="post">
+                            <form th:action="@{saveProduct}" th:object="${produitmettre1}" method="post">
                                 <div class="modal-body mx-3">
 
                                     <div class="md-form mb-5">
@@ -109,31 +109,34 @@
 
                                     <div class="md-form mb-5">
                                         <label data-error="wrong" data-success="right" >Description</label>
-                                        <input type="text"  class="form-control validate" th:field="*{description}">
+                                        <input type="text"  class="form-control validate" name="description" th:field="*{description}">
 
                                     </div>
+
 
                                     <div class="md-form mb-5">
                                         <label data-error="wrong" data-success="right" >Quantite</label>
-                                        <input type="text" id="formAgeEdit" class="form-control validate" th:field="*{qte}">
+                                        <input type="text" class="form-control validate" th:field="*{qte}">
 
                                     </div>
 
                                     <div class="md-form mb-5">
+
                                         <label data-error="wrong" data-success="right" >Prix</label>
                                         <input type="text" class="form-control validate" th:field="*{prix}">
 
                                     </div>
+                                    <button class="btn btn-primary">Save</button>
+
+
+
+                                </div>
 
 
 
 
 
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
-                                <input  type="submit" class="btn btn-outline-primary btn-block buttonAdd" data-dismiss="modal" value="Ajouter">
 
-                            </div>
                             </form>
                         </div>
                     </div>
@@ -195,7 +198,7 @@
 
                 <div class="text-center buttonEditWrapper">
                     <a class="btn btn-info btn-rounded btn-sm buttonEdit" data-toggle="modal" data-target="#modalEdit"
-                            disabled>Edit<i class="fas fa-pencil-square-o ml-1"></i></a>
+                       disabled>Edit<i class="fas fa-pencil-square-o ml-1"></i></a>
                 </div>
 
                 <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete"
@@ -213,7 +216,7 @@
 
                             </div>
                             <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
-                                <button type="button" class="btn btn-danger btnYesClass" id="btnYes" data-dismiss="modal">Yes</button>
+                                <button type="button" class="btn btn-danger btnYesClass" id="btnYes" data-dismiss="modal" >Yes</button>
                                 <button type="button" class="btn btn-primary btnNoClass" id="btnNo" data-dismiss="modal">No</button>
                             </div>
                         </div>
@@ -255,7 +258,7 @@
                     <td th:text="${produit.qte}"></td>
                     <td th:text="${produit.description}"></td>
                     <td th:text="${produit.prix}"></td>
-                    <td><a class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal" disabled data-target="#modalDelete"
+                    <td><a  class="btn btn-danger btn-sm btn-rounded buttonDelete" th:href="@{delete(id=${produit.id})}" onclick="return confirm('etes vous sur ?') "
                     >Delete<i class="fas fa-times ml-1"></i></a></td>
 
                 </tr>
@@ -272,4 +275,4 @@
 <script type="application/javascript" src="../js/jquery-3.4.1.min.js" ></script>
 <script type="application/javascript" src="../js/agrHome.js" ></script>
 </body>
-</html>
+</html></html>

@@ -31,13 +31,13 @@
 <div class="container-fluid view1">
     <div class="container-fluid">
         <div class="row">
-            <h1 class="col-md-6 col-lg-6 col-s-12" style="color:white;">
+            <h1 class="text-center" style="color:white;">
                 <img src="img/farmer.png" id="farmer">E-souk
             </h1>
-            <ul class="col-md-6 col-lg-6 col-s-12 nav1">
-                <li><button><i class="fas fa-home"></i>Acceuil</button></li>
-                <li><button><i class="fas fa-exclamation-circle"></i>Info</button></li>
-                <li><button><i class="	fas fa-rocket"></i>Se Connecter /<i class="fas fa-address-book"></i>S'inscrire</button></li>
+            <ul class="col-md-6 col-lg-6 col-s-12 nav1 ml-auto">
+                <li><a class="btn"><i class="fas fa-home"></i>Acceuil</a></li>
+                <li><a class="btn"><i class="fas fa-exclamation-circle"></i>Info</a></li>
+                <li><a class="btn" th:href="@{/login}"><i class="fas fa-rocket"></i>Se Connecter /<i class="fas fa-address-book"></i>S'inscrire</a></li>
 
             </ul>
 
@@ -65,9 +65,71 @@
 
     </div>
 </div>
-  
-<div class="container-fluid view2">
+<div class="row">
+    <div class="col-6" id="container">
+        <div class="balloon white">
+            <div class="star-red"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="triangle"></div>
+            <div class="string"></div>
+        </div>
 
+        <div class="balloon red">
+            <div class="star"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="triangle"></div>
+            <div class="string"></div>
+        </div>
+
+        <div class="balloon blue">
+            <div class="star"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="triangle"></div>
+            <div class="string"></div>
+        </div>
+        <div id="timer"></div>
+        <h1>On vous attend </h1>
+    </div>
+    <div class="col-6">
+        <h1 class="text-center">CATEGORIES</h1>
+        <div class="row" style="margin-top: 35px;">
+            <div class="card col-3" th:each="categorie :${categories}">
+
+                <!-- Card image -->
+                <img class="card-img-top " th:src="@{'/img/'+ ${categorie.photo} +'.jpg'}" alt="Categoriess">
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 class="card-title" th:text="${categorie.nom}"></h4>
+                    <!-- Text -->
+                    <p class="card-text" th:text="${categorie.description}"></p>
+                    <!-- Button -->
+                    <a href="" class="btn btn-outline-success btn-rounded waves-effect">Voir</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card image -->
+
+
+        </div>
+        </div>
+
+    </div>
+</div>
 </div>
 
   <hr>
@@ -75,18 +137,18 @@
         <div class="container-fluid padding">
           
             <h1 class="text-center text-dark ">Nos Produits</h1>
-            <nav class="navbar navbar-white bg-white search2 ">
+           <!-- <nav class="navbar navbar-white bg-white search2 ">
               <form class="form-inline md-form" th:action="@{../searchProduit}"
          th:object="${produit}" method="POST">
                 <input class="form-control mr-sm-2"  type="search" placeholder="Search" aria-label="Search" th:field="*{designation}" style="background-color:white;">
 
                 <input class="btn btn-success my-2 my-sm-0" id="serach2" type="submit">
               </form>
-            </nav>
+            </nav>-->
           </div>
-          <div class="row padding container" style="margin-right:auto;margin-left:auto;">
+          <div class="row padding container-fluid" style="margin-right:auto;margin-left:auto;">
 
-            <div class="col-md-3 cardProduit" th:each="produits:${produits}">
+            <div class="col-md-2 cardProduit" th:each="produits:${produits}">
               <div class="card card-cascade wider">
                   <div class="view view-cascade overlay zoom">
 

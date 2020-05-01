@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AgriculteurController {
@@ -23,6 +24,7 @@ public class AgriculteurController {
     private ProductRepository produitDao;
     @Autowired
     private ProduitmettreRepository produitmettreDao;
+
     @GetMapping("/agriculteur")
     public String showHome(Model theModel)
     {
@@ -40,6 +42,11 @@ public class AgriculteurController {
     {
         System.out.println(produit);
         produitmettreDao.save(produit);
+        return "redirect:/agriculteur";
+    }
+    @RequestMapping(value="/delete")
+    public String delete(Integer id) {
+        produitmettreDao.deleteById(id);
         return "redirect:/agriculteur";
     }
 
